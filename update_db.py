@@ -94,7 +94,7 @@ class MongoConnect():
 if __name__ == '__main__':
     mgdb = MongoConnect("stocks_monitoring", "stocks_key_stats")
     all_tickers = mgdb.get_all_tickers()
-    for ticker in all_tickers[-27:]:
+    for ticker in all_tickers:
         mgdb.update_ticker_record(ticker)
         print("Done for "+ ticker)
         
